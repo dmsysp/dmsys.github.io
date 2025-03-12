@@ -5,14 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온라인 사업 기획서</title>
     <style>
-        body {
-            font-family: 'Noto Sans KR', 'Arial', sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 10px; /* 모바일에서 패딩 축소 */
-            background-color: #f9f9f9;
-            color: #333;
-        }
+   html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Noto Sans KR', 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    color: #333;
+}
         .container {
             max-width: 900px;
             width: 100%; /* 모바일에서 전체 너비 활용 */
@@ -23,13 +27,13 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
         }
         h1 {
-            text-align: center;
-            color: #2c3e50;
-            font-size: 2rem; /* 모바일에서 글씨 크기 상대적 조정 */
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #e74c3c;
-        }
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #e74c3c;
+}
         h2 {
             color: #2980b9;
             font-size: 1.75rem;
@@ -44,9 +48,9 @@
             font-weight: bold;
         }
         p, li {
-            font-size: 1rem;
-            color: #555;
-        }
+    font-size: 1rem;
+    color: #555;
+}
         ul {
             list-style-type: none;
             padding-left: 0;
@@ -93,54 +97,27 @@
 
         /* 모바일 반응형 미디어 쿼리 */
         @media (max-width: 768px) {
-            body {
-                padding: 5px;
-            }
-            .container {
-                padding: 15px;
-            }
-            h1 {
-                font-size: 1.5rem; /* 모바일에서 더 작게 */
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
-            h3 {
-                font-size: 1.125rem;
-            }
-            p, li {
-                font-size: 0.875rem; /* 모바일에서 글씨 축소 */
-            }
-            ul li {
-                padding: 8px;
-            }
-            .highlight {
-                padding: 10px;
-            }
-            .budget-table th, .budget-table td {
-                padding: 8px;
-                font-size: 0.875rem;
-            }
-        }
-
+    html {
+        font-size: 18px;
+    }
+    body {
+        padding: 10px;
+    }
+    h1 {
+        font-size: 1.75rem;
+    }
+    p, li {
+        font-size: 1rem;
+    }
+}
         @media (max-width: 480px) {
-            h1 {
-                font-size: 1.25rem;
-            }
-            h2 {
-                font-size: 1.125rem;
-            }
-            h3 {
-                font-size: 1rem;
-            }
-            p, li {
-                font-size: 0.75rem;
-            }
-            .budget-table th, .budget-table td {
-                padding: 6px;
-                font-size: 0.75rem;
-            }
-        }
+    h1 {
+        font-size: 1.5rem;
+    }
+    p, li {
+        font-size: 0.875rem;
+    }
+}
     </style>
 </head>
 <body>
