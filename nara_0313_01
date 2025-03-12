@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>낙동강물환경센터 물품구매 입찰 공고 요약</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #0056b3;
+        }
+        h1 {
+            border-bottom: 2px solid #0056b3;
+            padding-bottom: 10px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 5px;
+        }
+        .important {
+            color: red;
+            font-weight: bold;
+        }
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        .info-table th, .info-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        .info-table th {
+            background-color: #f2f2f2;
+        }
+        .footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>낙동강물환경센터 물품구매 입찰 공고 (제2025-2호)</h1>
+        <p>본 공고는 낙동강물환경센터에서 왜관수질측정센터 시험분석용 시약 및 소모품 구매 입찰에 관한 내용입니다. 입찰 참여 전 모든 내용을 숙지하시고, 중요 내용은 반드시 재확인하시기 바랍니다.</p>
+
+        <div class="section">
+            <h2>1. 입찰에 부치는 사항</h2>
+            <table class="info-table">
+                <tr>
+                    <th>물품명</th>
+                    <td>왜관수질측정센터 시험분석용 시약 및 소모품 구매(메틸알코올 등 105종)</td>
+                </tr>
+                <tr>
+                    <th>규격 및 수량</th>
+                    <td>모든 제품은 정품(신품)이어야 하며, 상세규격은 첨부된 내역서 참조</td>
+                </tr>
+                 <tr>
+                    <th>입찰방법</th>
+                    <td>전자입찰에 의한 제한경쟁(총액) 적격심사</td>
+                </tr>
+                <tr>
+                    <th>기초금액</th>
+                    <td>총 90,000,000원(부가세 포함)</td>
+                </tr>
+                <tr>
+                    <th>납품기한</th>
+                    <td>계약 후 6주 이내</td>
+                </tr>
+                <tr>
+                    <th>납품장소</th>
+                    <td>낙동강물환경센터 왜관수질측정센터(수요 부서 지정장소, 규격서 참고)</td>
+                </tr>
+                <tr>
+                    <th>전자입찰서 접수</th>
+                    <td>2025.03.17.(월) 14:00 ~ 2025.03.24.(월) 14:00</td>
+                </tr>
+                <tr>
+                    <th>개찰일시</th>
+                    <td>2025.03.24.(월) 15:00</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="section">
+            <h2>2. 입찰참가자격</h2>
+            <ul>
+                <li>조달청 전자입찰 이용자 등록 필수</li>
+                <li>지문인식 신원확인 입찰 적용, 지문정보 등록 필요</li>
+                <li>「국가를 당사자로 하는 계약에 관한 법률 시행령」 제12조 및 제76조에 의한 자격 제한 없는 업체</li>
+                <li>화학물질관리법 제29조 3 및 시행규칙 제31조의 3 규정에 의한 시약판매업(업종코드7468), 의료기기법 제17조의 규정에 의한 의료기기판매업(업종코드5312) 모두 득한 업체</li>
+                <li>소기업 또는 소상공인 확인서 소지</li>
+                <li>공고일 전일 기준 법인등기부상 소재지가 경상북도 또는 대구광역시 업체</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>3. 낙찰자 결정 방법</h2>
+            <ul>
+                <li>적격심사(추정가격이 고시금액 미만인 물품 제조 또는 구매 입찰)</li>
+                <li>적격심사 평가기준: 「조달청 물품구매적격심사 세부기준」 제4조제1항제3호 [별표 3]</li>
+                <li>낙찰하한율: 84.245%</li>
+                <li>예정가격은 복수예비가격 산술평균으로 결정</li>
+                <li>동일가격 입찰 시 전자조달시스템 자동 추첨</li>
+                <li>낙찰자는 10일 이내 계약 체결 (7일 이내 산출내역서 제출)</li>
+            </ul>
+        </div>
+
+        <div class="section">
+            <h2>4. 기타 유의사항</h2>
+            <ul>
+                <li>청렴계약이행서약서 제출 필수</li>
+                <li>입찰 관련 모든 사항 숙지 후 참여</li>
+                <li>물품구매목록 제조사 또는 공급자에게 납품시기 및 견적가 확인 권장</li>
+                <li>전자입찰 이용 문의: 국가종합전자조달시스템 콜센터(☏ 1588-0800)</li>
+                <li>규격 관련 문의: ☏ 054-977-9205/ 왜관수질측정센터 최병규 연구사</li>
+                <li>계약 관련 문의: ☏ 053-602-2703/ 연구지원실 김명희 주무관</li>
+            </ul>
+        </div>
+
+        <div class="footer">
+            <p>2025년 03월, 낙동강물환경센터 계약관</p>
+        </div>
+    </div>
+</body>
+</html>
