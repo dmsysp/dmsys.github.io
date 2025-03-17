@@ -6,7 +6,7 @@
     <title>온라인 사업 기획서</title>
     <style>
         html {
-            font-size: 14px; /* A4에서 가독성을 위해 조정 */
+            font-size: 14px; /* A4 가독성 조정 */
         }
 
         body {
@@ -24,15 +24,7 @@
             margin: 0 auto;
             background: white;
             padding: 20px;
-            box-sizing: border-box; /* 패딩 포함 크기 계산 */
-            min-height: 1123px; /* A4 높이: 297mm ≈ 1123px */
-        }
-
-        .page {
-            page-break-before: always; /* 각 섹션이 새 페이지에서 시작 */
-            min-height: 1123px;
-            max-height: 1123px;
-            overflow: hidden; /* 내용이 페이지 밖으로 넘치지 않도록 */
+            box-sizing: border-box;
         }
 
         h1 {
@@ -42,6 +34,7 @@
             margin-bottom: 20px;
             padding-bottom: 10px;
             border-bottom: 3px solid #e74c3c;
+            break-inside: avoid; /* 제목이 페이지 끝에서 잘리지 않도록 */
         }
 
         h2 {
@@ -50,6 +43,8 @@
             margin-top: 15px;
             padding-left: 10px;
             border-left: 5px solid #e74c3c;
+            break-inside: avoid; /* 제목과 내용 분리 방지 */
+            break-before: avoid; /* 새 페이지 시작 방지 */
         }
 
         h3 {
@@ -57,6 +52,8 @@
             font-size: 1.2rem;
             margin-top: 15px;
             font-weight: bold;
+            break-inside: avoid; /* 부제목과 내용 분리 방지 */
+            break-before: avoid; /* 새 페이지 시작 방지 */
         }
 
         p, li {
@@ -90,6 +87,7 @@
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             margin-top: 10px;
+            break-inside: avoid; /* 블록이 잘리지 않도록 */
         }
 
         .budget-table {
@@ -97,6 +95,7 @@
             border-collapse: collapse;
             margin-top: 15px;
             font-size: 0.85rem;
+            break-inside: avoid; /* 테이블이 잘리지 않도록 */
         }
 
         .budget-table th, .budget-table td {
@@ -114,24 +113,29 @@
             background-color: #f9f9f9;
         }
 
-        /* 페이지 나누기 및 PDF 출력 최적화 */
+        /* PDF 출력 최적화 */
         @media print {
-            .page {
-                page-break-before: always;
-            }
             body {
                 margin: 0;
             }
             .container {
-                box-shadow: none; /* PDF에서 그림자 제거 */
+                box-shadow: none; /* 그림자 제거 */
+                page-break-inside: auto; /* 자연스러운 페이지 나누기 */
+            }
+            @page {
+                size: A4; /* A4 크기 강제 */
+                margin: 0; /* 여백 최소화 */
+            }
+            .section {
+                page-break-inside: auto; /* 섹션 내에서 자연스럽게 나누기 */
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="section page">
-            <h1>온라인 사업 기획서</h1>
+        <h1>온라인 사업 기획서</h1>
+        <div class="section">
             <h2>1. 사업 개요</h2>
             <h3>1.1 목적</h3>
             <div class="highlight">
@@ -151,7 +155,7 @@
             </div>
         </div>
 
-        <div class="section page">
+        <div class="section">
             <h2>2. 운영 전략</h2>
             <h3>2.1 초기 상품 수집 및 등록</h3>
             <div class="highlight">
@@ -166,9 +170,7 @@
                     <li><strong>가격 정책:</strong> 초기 판매 가격은 <strong>노마진(도매가 그대로)</strong> 설정으로 유입 유도.</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="section page">
             <h3>2.2 데이터 분석 및 상품 최적화</h3>
             <div class="highlight">
                 <ul>
@@ -181,6 +183,7 @@
                     <li><strong>도구:</strong> 프로그램 내 <strong>순위 추적 및 판매 데이터 분석</strong> 기능 활용.</li>
                 </ul>
             </div>
+
             <h3>2.3 광고 집행</h3>
             <div class="highlight">
                 <ul>
@@ -194,9 +197,7 @@
                     <li><strong>광고 채널:</strong> <strong>쿠팡 CPC 광고</strong> 우선 활용.</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="section page">
             <h3>2.4 원가 절감 및 수익 극대화</h3>
             <div class="highlight">
                 <ul>
@@ -206,9 +207,7 @@
                     <li><strong>상세페이지 고급화:</strong> <strong>2025 트렌드(미니멀 디자인, 동영상 삽입)</strong> 반영, <strong>전환율 10% 이상 향상</strong>.</li>
                 </ul>
             </div>
-        </div>
 
-        <div class="section page">
             <h3>2.5 판매 확대 및 플랫폼 최적화</h3>
             <div class="highlight">
                 <ul>
@@ -220,6 +219,7 @@
                     <li><strong>공격적 마케팅:</strong> 개별 상품별 <strong>맞춤 광고 집행</strong>, 판매량 기준 <strong>상위 10% 상품</strong> 집중 관리.</li>
                 </ul>
             </div>
+
             <h3>2.6 지속적 반복</h3>
             <div class="highlight">
                 <ul>
@@ -229,7 +229,7 @@
             </div>
         </div>
 
-        <div class="section page">
+        <div class="section">
             <h2>3. 실행 계획</h2>
             <h3>예산</h3>
             <table class="budget-table">
@@ -242,7 +242,7 @@
             </table>
         </div>
 
-        <div class="section page">
+        <div class="section">
             <h2>4. 성과 목표</h2>
             <div class="highlight">
                 <ul>
@@ -253,7 +253,7 @@
             </div>
         </div>
 
-        <div class="section page">
+        <div class="section">
             <h2>5. 결론</h2>
             <div class="highlight">
                 <ul>
