@@ -5,223 +5,231 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>온라인 사업 기획서</title>
     <style>
-   html {
-    font-size: 16px;
-}
+        html {
+            font-size: 14px; /* A4에서 가독성을 위해 조정 */
+        }
 
-body {
-    font-family: 'Noto Sans KR', 'Arial', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 10px;
-    background-color: #f9f9f9;
-    color: #333;
-}
+        body {
+            font-family: 'Noto Sans KR', 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
         .container {
-            max-width: 900px;
-            width: 100%; /* 모바일에서 전체 너비 활용 */
+            max-width: 794px; /* A4 폭: 210mm ≈ 794px at 96dpi */
+            width: 100%;
             margin: 0 auto;
             background: white;
-            padding: 20px; /* 모바일에서 패딩 조정 */
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            padding: 20px;
+            box-sizing: border-box; /* 패딩 포함 크기 계산 */
+            min-height: 1123px; /* A4 높이: 297mm ≈ 1123px */
         }
+
+        .page {
+            page-break-before: always; /* 각 섹션이 새 페이지에서 시작 */
+            min-height: 1123px;
+            max-height: 1123px;
+            overflow: hidden; /* 내용이 페이지 밖으로 넘치지 않도록 */
+        }
+
         h1 {
-    text-align: center;
-    color: #2c3e50;
-    font-size: 2rem;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 3px solid #e74c3c;
-}
+            text-align: center;
+            color: #2c3e50;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #e74c3c;
+        }
+
         h2 {
             color: #2980b9;
-            font-size: 1.75rem;
-            margin-top: 25px;
+            font-size: 1.5rem;
+            margin-top: 15px;
             padding-left: 10px;
             border-left: 5px solid #e74c3c;
         }
+
         h3 {
             color: #16a085;
-            font-size: 1.375rem;
-            margin-top: 20px;
+            font-size: 1.2rem;
+            margin-top: 15px;
             font-weight: bold;
         }
+
         p, li {
-    font-size: 1rem;
-    color: #555;
-}
+            font-size: 0.9rem;
+            color: #555;
+        }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+
         ul li {
-            padding: 10px; /* 모바일에서 패딩 축소 */
+            padding: 8px;
         }
+
         ul li:before {
             content: "•";
             color: #e74c3c;
             font-weight: bold;
-            margin-right: 8px; /* 모바일에서 간격 조정 */
+            margin-right: 8px;
         }
+
         .section {
-            margin-bottom: 30px; /* 모바일에서 간격 축소 */
+            margin-bottom: 20px;
         }
+
         .highlight {
             background-color: #ffffff;
-            padding: 15px; /* 모바일에서 패딩 축소 */
+            padding: 10px;
             border-radius: 10px;
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
             margin-top: 10px;
         }
+
         .budget-table {
             width: 100%;
             border-collapse: collapse;
-            margin-top: 20px;
-            display: block; /* 모바일에서 테이블 스크롤 가능하도록 */
-            overflow-x: auto; /* 가로 스크롤 활성화 */
-            white-space: nowrap; /* 텍스트 줄바꿈 방지 */
+            margin-top: 15px;
+            font-size: 0.85rem;
         }
+
         .budget-table th, .budget-table td {
             border: 1px solid #ddd;
-            padding: 10px; /* 모바일에서 패딩 축소 */
+            padding: 8px;
             text-align: left;
         }
+
         .budget-table th {
             background-color: #e74c3c;
             color: white;
         }
+
         .budget-table tr:nth-child(even) {
             background-color: #f9f9f9;
         }
 
-        /* 모바일 반응형 미디어 쿼리 */
-        @media (max-width: 768px) {
-    html {
-        font-size: 18px;
-    }
-    body {
-        padding: 10px;
-    }
-    h1 {
-        font-size: 1.75rem;
-    }
-    p, li {
-        font-size: 1rem;
-    }
-}
-        @media (max-width: 480px) {
-    h1 {
-        font-size: 1.5rem;
-    }
-    p, li {
-        font-size: 0.875rem;
-    }
-}
+        /* 페이지 나누기 및 PDF 출력 최적화 */
+        @media print {
+            .page {
+                page-break-before: always;
+            }
+            body {
+                margin: 0;
+            }
+            .container {
+                box-shadow: none; /* PDF에서 그림자 제거 */
+            }
+        }
     </style>
 </head>
 <body>
     <div class="container">
-      
-        <div class="section">
-            <h2>온라인 사업 기획서</h2>
+        <div class="section page">
+            <h1>온라인 사업 기획서</h1>
             <h2>1. 사업 개요</h2>
             <h3>1.1 목적</h3>
             <div class="highlight">
-            <ul>
-                <li><strong>도매사이트의 베스트 상품과 네이버 베스트 상품 리스트</strong>를 기반으로, 대량 상품 등록을 통해 <strong>효자 상품(판매 우수 상품)</strong>을 단기간 내 다수 발굴.</li>
-                <li>초기 <strong>노마진 전략</strong>으로 유입과 판매 데이터를 확보한 뒤, 상세페이지 최적화와 광고 집행을 통해 <strong>수익성 극대화</strong>.</li>
-                <li>최종적으로 <strong>원가 절감 및 공격적인 마케팅</strong>을 통해 <strong>지속 가능한 판매 구조</strong> 구축.</li>
-               
-            </ul>
+                <ul>
+                    <li><strong>도매사이트의 베스트 상품과 네이버 베스트 상품 리스트</strong>를 기반으로, 대량 상품 등록을 통해 <strong>효자 상품(판매 우수 상품)</strong>을 단기간 내 다수 발굴.</li>
+                    <li>초기 <strong>노마진 전략</strong>으로 유입과 판매 데이터를 확보한 뒤, 상세페이지 최적화와 광고 집행을 통해 <strong>수익성 극대화</strong>.</li>
+                    <li>최종적으로 <strong>원가 절감 및 공격적인 마케팅</strong>을 통해 <strong>지속 가능한 판매 구조</strong> 구축.</li>
+                </ul>
             </div>
-
             <h3>1.2 기대 효과</h3>
             <div class="highlight">
-            <ul>
-                
-                <li>짧은 기간 내 <strong>효자 상품 발굴</strong>로 <strong>빠른 수익 창출</strong>.</li>
-                <li><strong>데이터 기반 상품 선별 및 최적화</strong>로 운영 효율성 증대.</li>
-                <li>장기적으로 <strong>원가 절감과 브랜드 경쟁력 강화</strong>를 통한 <strong>시장 점유율 확대</strong>.</li>
-                
-            </ul>
+                <ul>
+                    <li>짧은 기간 내 <strong>효자 상품 발굴</strong>로 <strong>빠른 수익 창출</strong>.</li>
+                    <li><strong>데이터 기반 상품 선별 및 최적화</strong>로 운영 효율성 증대.</li>
+                    <li>장기적으로 <strong>원가 절감과 브랜드 경쟁력 강화</strong>를 통한 <strong>시장 점유율 확대</strong>.</li>
+                </ul>
             </div>
         </div>
 
-        <div class="section">
+        <div class="section page">
             <h2>2. 운영 전략</h2>
             <h3>2.1 초기 상품 수집 및 등록</h3>
             <div class="highlight">
-                <li><strong>데이터 소스:</strong></li> 도매사이트 베스트 상품 및 네이버 베스트 상품 리스트 활용.</p>
-                <li><strong>방법:</strong></li> 키워드 분석, 상품 수집, 편집, 업로드를 지원하는 <strong>올인원 프로그램</strong> 사용.</p>
                 <ul>
-                    <li><strong>프로그램 사양:</strong> 키워드 분석, 상품 수집, 편집, 업로드, 순위 추적 기능 포함.</li>
-                    <li><strong>비용:</strong> 월 <strong>165,000원</strong>.</li>
+                    <li><strong>데이터 소스:</strong> 도매사이트 베스트 상품 및 네이버 베스트 상품 리스트 활용.</li>
+                    <li><strong>방법:</strong> 키워드 분석, 상품 수집, 편집, 업로드를 지원하는 <strong>올인원 프로그램</strong> 사용.</li>
+                    <ul>
+                        <li><strong>프로그램 사양:</strong> 키워드 분석, 상품 수집, 편집, 업로드, 순위 추적 기능 포함.</li>
+                        <li><strong>비용:</strong> 월 <strong>165,000원</strong>.</li>
+                    </ul>
+                    <li><strong>주기:</strong> <strong>매일</strong> 상품 검색 및 업로드 진행.</li>
+                    <li><strong>가격 정책:</strong> 초기 판매 가격은 <strong>노마진(도매가 그대로)</strong> 설정으로 유입 유도.</li>
                 </ul>
-                <li><strong>주기:</strong></li> <strong>매일</strong> 상품 검색 및 업로드 진행.</p>
-                <li><strong>가격 정책:</strong></li> 초기 판매 가격은 <strong>노마진(도매가 그대로)</strong> 설정으로 유입 유도.</p>
             </div>
+        </div>
 
+        <div class="section page">
             <h3>2.2 데이터 분석 및 상품 최적화</h3>
             <div class="highlight">
-            <ul>
-                <li><strong>선별 기준:</strong> 등록 상품 중 <strong>판매 발생</strong> 또는 <strong>유입(조회수) 발생 상품</strong> 선별.</li>
-                <li><strong>작업 내용:</strong></li>
                 <ul>
-                    <li><strong>상세페이지 개선:</strong> 전문가 수준의 이미지와 텍스트로 고객 신뢰도 향상.</li>
-                    <li><strong>가격 조정:</strong> 시장 경쟁력 확보를 위한 <strong>최소 마진 설정 (예: 10~20%)</strong>.</li>
+                    <li><strong>선별 기준:</strong> 등록 상품 중 <strong>판매 발생</strong> 또는 <strong>유입(조회수) 발생 상품</strong> 선별.</li>
+                    <li><strong>작업 내용:</strong></li>
+                    <ul>
+                        <li><strong>상세페이지 개선:</strong> 전문가 수준의 이미지와 텍스트로 고객 신뢰도 향상.</li>
+                        <li><strong>가격 조정:</strong> 시장 경쟁력 확보를 위한 <strong>최소 마진 설정 (예: 10~20%)</strong>.</li>
+                    </ul>
+                    <li><strong>도구:</strong> 프로그램 내 <strong>순위 추적 및 판매 데이터 분석</strong> 기능 활용.</li>
                 </ul>
-                <li><strong>도구:</strong> 프로그램 내 <strong>순위 추적 및 판매 데이터 분석</strong> 기능 활용.</li>
-            </ul>
             </div>
-
             <h3>2.3 광고 집행</h3>
-               <div class="highlight">
+            <div class="highlight">
                 <ul>
                     <li><strong>쿠팡 광고:</strong> 상품 테스트용 <strong>일 3만 원</strong> (최대 10개 상품 동시 진행).</li>
                     <li><strong>성과 분석:</strong> <strong>7일간</strong> 데이터 수집 후 상위 <strong>3~5개 상품</strong> 선정.</li>
+                    <li><strong>타겟 광고:</strong></li>
+                    <ul>
+                        <li>상품별 기본 <strong>일 3만 원 광고비</strong> 설정.</li>
+                        <li>판매량 증가 시 광고비 비례 확대 (예: <strong>일 5만 원 → 10만 원</strong>).</li>
+                    </ul>
+                    <li><strong>광고 채널:</strong> <strong>쿠팡 CPC 광고</strong> 우선 활용.</li>
                 </ul>
-                <li><strong>타겟 광고:</strong></li>
-                <ul>
-                    <li>상품별 기본 <strong>일 3만 원 광고비</strong> 설정.</li>
-                    <li>판매량 증가 시 광고비 비례 확대 (예: <strong>일 5만 원 → 10만 원</strong>).</li>
-                </ul>
-                <li><strong>광고 채널:</strong> <strong>쿠팡 CPC 광고</strong> 우선 활용.</li>
-            </ul>
             </div>
+        </div>
 
+        <div class="section page">
             <h3>2.4 원가 절감 및 수익 극대화</h3>
             <div class="highlight">
                 <ul>
                     <li><strong>사입 전환:</strong> 판매량 증가 시 도매사이트에서 사입 진행, 택배비 포함 <strong>최소 마진(예: 10~20%/건)</strong> 확보.</li>
                     <li><strong>직수입 및 대량 도매:</strong> 중국 직수입으로 <strong>원가 20~30% 절감</strong>, 도매사이트에 <strong>대량 판매</strong>로 매출 극대화.</li>
-                    <li><strong>기관 사업 연계:</strong> 직접 수입한 상품의 브랜딩 및 <strong>기관 납품 가능성 타진</strong> </li>
+                    <li><strong>기관 사업 연계:</strong> 직접 수입한 상품의 브랜딩 및 <strong>기관 납품 가능성 타진</strong>.</li>
                     <li><strong>상세페이지 고급화:</strong> <strong>2025 트렌드(미니멀 디자인, 동영상 삽입)</strong> 반영, <strong>전환율 10% 이상 향상</strong>.</li>
                 </ul>
             </div>
+        </div>
 
+        <div class="section page">
             <h3>2.5 판매 확대 및 플랫폼 최적화</h3>
             <div class="highlight">
-            <ul>
-                <li><strong>배송강화:</strong></li>
                 <ul>
-                    <li><strong>쿠팡 로켓그로스:</strong> 쿠팡 물류 활용으로 배송 경쟁력 강화.</li>
-                    <li><strong>네이버 오늘출발:</strong> 빠른 배송 옵션으로 고객 만족도 제고.</li>
+                    <li><strong>배송강화:</strong></li>
+                    <ul>
+                        <li><strong>쿠팡 로켓그로스:</strong> 쿠팡 물류 활용으로 배송 경쟁력 강화.</li>
+                        <li><strong>네이버 오늘출발:</strong> 빠른 배송 옵션으로 고객 만족도 제고.</li>
+                    </ul>
+                    <li><strong>공격적 마케팅:</strong> 개별 상품별 <strong>맞춤 광고 집행</strong>, 판매량 기준 <strong>상위 10% 상품</strong> 집중 관리.</li>
                 </ul>
-                <li><strong>공격적 마케팅:</strong> 개별 상품별 <strong>맞춤 광고 집행</strong>, 판매량 기준 <strong>상위 10% 상품</strong> 집중 관리.</li>
-            </ul>
             </div>
-
             <h3>2.6 지속적 반복</h3>
             <div class="highlight">
-            <ul>
-                <li>위 과정을 <strong>매달 반복</strong>하여 <strong>효자 상품군 확대</strong>.</li>
-                <li><strong>데이터 축적</strong>을 통해 <strong>트렌드 예측 및 신규 상품 발굴</strong> 강화.</li>
-            </ul>
+                <ul>
+                    <li>위 과정을 <strong>매달 반복</strong>하여 <strong>효자 상품군 확대</strong>.</li>
+                    <li><strong>데이터 축적</strong>을 통해 <strong>트렌드 예측 및 신규 상품 발굴</strong> 강화.</li>
+                </ul>
             </div>
         </div>
 
-        <div class="section">
+        <div class="section page">
             <h2>3. 실행 계획</h2>
             <h3>예산</h3>
             <table class="budget-table">
@@ -234,24 +242,24 @@ body {
             </table>
         </div>
 
-        <div class="section">
+        <div class="section page">
             <h2>4. 성과 목표</h2>
             <div class="highlight">
-            <ul>
-                <li><strong>1개월:</strong> 등록 상품 <strong>1,000개 이상</strong>, 유입 상품 <strong>50개 발굴</strong>.</li>
-                <li><strong>3개월:</strong> 판매 발생 상품 <strong>20개 이상</strong>, 월 매출 <strong>1,000만 원 돌파</strong>.</li>
-                <li><strong>6개월:</strong> 효자 상품 <strong>10개 이상</strong>, 월 순이익 <strong>500만 원 이상</strong>.</li>
-            </ul>
+                <ul>
+                    <li><strong>1개월:</strong> 등록 상품 <strong>1,000개 이상</strong>, 유입 상품 <strong>50개 발굴</strong>.</li>
+                    <li><strong>3개월:</strong> 판매 발생 상품 <strong>20개 이상</strong>, 월 매출 <strong>1,000만 원 돌파</strong>.</li>
+                    <li><strong>6개월:</strong> 효자 상품 <strong>10개 이상</strong>, 월 순이익 <strong>500만 원 이상</strong>.</li>
+                </ul>
             </div>
         </div>
 
-        <div class="section">
+        <div class="section page">
             <h2>5. 결론</h2>
             <div class="highlight">
                 <ul>
-                <li>본 기획은 <strong>도매사이트와 네이버 데이터</strong>를 활용한 대량 등록으로 시작, <strong>데이터 기반 최적화와 원가 절감 및 수익성 극대화</strong>를 목표로 하는 전략입니다.</li><br>
-                <li><strong>단기 목표</strong>는 <strong>효자 상품 발굴</strong>이며, 장기적으로는 <strong>안정적인 판매 파이프라인 구축</strong>을 통해 <strong>지속적인 성장 가능성</strong>을 확보합니다.</li><br>
-                <li><strong>빠른 실행과 지속적인 반복</strong>으로 <strong>시장 트렌드</strong>에 민첩하게 대응하며 <strong>경쟁력을 강화</strong>할 예정입니다.</li>
+                    <li>본 기획은 <strong>도매사이트와 네이버 데이터</strong>를 활용한 대량 등록으로 시작, <strong>데이터 기반 최적화와 원가 절감 및 수익성 극대화</strong>를 목표로 하는 전략입니다.</li><br>
+                    <li><strong>단기 목표</strong>는 <strong>효자 상품 발굴</strong>이며, 장기적으로는 <strong>안정적인 판매 파이프라인 구축</strong>을 통해 <strong>지속적인 성장 가능성</strong>을 확보합니다.</li><br>
+                    <li><strong>빠른 실행과 지속적인 반복</strong>으로 <strong>시장 트렌드</strong>에 민첩하게 대응하며 <strong>경쟁력을 강화</strong>할 예정입니다。</li>
                 </ul>
             </div>
         </div>
